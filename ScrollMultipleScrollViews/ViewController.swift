@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        // To scroll the top scrollView backward,
-        // first set the top scrollView scrolled to the right edge
+        // To scroll the top scroll view backward,
+        // first set the top scroll view scrolled to the right edge
         topScrollView.contentOffset = CGPoint(x: topScrollView.bounds.width, y: 0.0)
     }
 }
@@ -38,12 +38,12 @@ extension ViewController: UIScrollViewDelegate {
         let outerScrollDistance = outerScrollView.contentSize.width - outerScrollView.bounds.width
         let progress = scrollView.contentOffset.x / outerScrollDistance
 
-        // Scroll the top scrollView backward programmatically
+        // Scroll the top scroll view backward programmatically
         let topScrollDistance = topScrollView.contentSize.width - topScrollView.bounds.width
         let topOffsetX = (1 - progress) * topScrollDistance
         topScrollView.contentOffset = CGPoint(x: topOffsetX, y: 0.0)
 
-        // Scroll the bottom scrollView forward programmatically
+        // Scroll the bottom scroll view forward programmatically
         let bottomScrollDistance = bottomScrollView.contentSize.width - bottomScrollView.bounds.width
         let bottomOffsetX = progress * bottomScrollDistance
         bottomScrollView.contentOffset = CGPoint(x: bottomOffsetX, y: 0.0)
