@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        // Aim to scroll the top scrollView backward,
-        // so set the top scrollView scrolled to the right edge at first
+        // To scroll the top scrollView backward,
+        // first set the top scrollView scrolled to the right edge
         topScrollView.contentOffset = CGPoint(x: topScrollView.bounds.width, y: 0.0)
     }
 }
